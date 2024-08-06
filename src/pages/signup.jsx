@@ -22,9 +22,9 @@ import {
               Book Rent
             </Typography>
           </div>
-          <div className="flex flex-col gap-10 mt-5 w-full">
+          <div className="flex flex-col gap-10 mt-10 w-full">
             <Typography variant="h5" color="text.primary">
-              Login
+              Signup as Owner
               <Divider className="pt-2" />
             </Typography>
             <form className=" flex flex-col gap-5">
@@ -32,20 +32,23 @@ import {
                 fullWidth
                 label="Email address"
                 name="email"
-                color="primary"
+                color="secondary"
               />
-              <TextField fullWidth label="password" password color="primary" />
+              <TextField fullWidth label="Password" type="password" color="secondary" />
+              <TextField fullWidth label="Confirm Password" type="password" color="secondary" />
+              <TextField fullWidth label="Location" type="text" color="secondary" />
+              <TextField fullWidth label="Phone Number" type="tel" color="secondary" />
               <FormControlLabel
                 control={<Checkbox color="secondary" />}
-                label="Remember me"
+                label="I accept the Terms and Conditions"
               />
               <Button variant="contained" color="secondary">
                 Login
               </Button>
             <Typography variant="h6" color="text.primary" className="text-center">
-              Haven not an account?
-              <Link to="/signup" className="text-primary">
-                Sign up
+              Already have an account?
+              <Link to="/" className="text-primary">
+                Login
               </Link>
             </Typography>
             </form>
