@@ -5,7 +5,12 @@ import { createTheme, ThemeProvider } from "@mui/material";
 import Login from "./pages/login.jsx";
 import Signup from "./pages/signup.jsx";
 import "./index.css";
+import AdminDashboard from "./pages/AdminDashboard/adminDashboard.jsx";
+import AdminBooks from "./pages/AdminBooks/index.jsx";
 const theme = createTheme({
+  typography: {
+    fontFamily: '"Inter", sans-serif',
+  },
   palette: {
     text: { secondary: "#fffff" },
     primary: {
@@ -24,9 +29,17 @@ const router = createBrowserRouter([
     element: <Login />,
   },
   {
-    path:'/signup',
-    element:<Signup/>
-  }
+    path: "/signup",
+    element: <Signup />,
+  },
+  {
+    path: "/dashboard",
+    element: <AdminDashboard />,
+  },
+  {
+    path: "/books",
+    element: <AdminBooks />,
+  },
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
