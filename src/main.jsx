@@ -7,6 +7,7 @@ import Signup from "./pages/signup.jsx";
 import "./index.css";
 import AdminDashboard from "./pages/AdminDashboard/adminDashboard.jsx";
 import AdminBooks from "./pages/AdminBooks/index.jsx";
+import AdminOwners from "./pages/AdminOwners/AdminOwners.jsx";
 const theme = createTheme({
   typography: {
     fontFamily: '"Inter", sans-serif',
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
   {
     path: "/books",
     element: <AdminBooks />,
+  },
+  {
+    path: "/owners",
+    element: <AdminOwners />,
   },
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(

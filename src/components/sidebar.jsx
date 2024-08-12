@@ -14,7 +14,7 @@ const Sidebar = () => {
     {
       title: "Owners",
       icon: <Icon icon="mingcute:user-2-line" />,
-      link: "/dashboard",
+      link: "/owners",
     },
     {
       title: "Other",
@@ -90,7 +90,7 @@ const Sidebar = () => {
         </div>
       </div>
       <div className="h-full flex items-end w-full p-5 ">
-        <div className="w-full bg-gray-500 rounded-md p-5 text-white flex justify-center items-center gap-5 cursor-pointer hover:bg-gray-400 duration-150">
+        <div className="w-full bg-gray-500 rounded-md p-3 text-white flex justify-center items-center gap-5 cursor-pointer hover:bg-gray-400 duration-150">
           <Icon icon="solar:logout-2-outline" className="text-3xl" />
           <Typography style={{fontSize:'1.5rem'}}>Logout</Typography>
         </div>

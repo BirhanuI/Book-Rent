@@ -1,6 +1,6 @@
 import Header from "../../components/adminHeader";
 import Sidebar from "../../components/sidebar";
-import BookStatusTable from "../AdminDAshboard/bookStatusTable";
+import BookStatusTable from "../AdminDashboard/bookStatusTable";
 import OwnerTable from "./ownerTable";
 
 const AdminBooks = () => {

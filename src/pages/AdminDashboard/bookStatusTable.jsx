@@ -6,7 +6,7 @@ import {
   DEFAULT_OPTIONS,
   getTheme,
 } from "@table-library/react-table-library/material-ui";
-import { IconButton, Typography } from "@mui/material";
+import { Avatar, IconButton, Typography } from "@mui/material";
 import { Icon } from "@iconify/react/dist/iconify.js";
 
 const BookStatusTable = () => {
@@ -21,7 +21,7 @@ const BookStatusTable = () => {
     },
     {
       no: 2,
-      book_no: "5235",
+      book_no: "6534",
       owner: "Birhanu N",
       avatar: "",
       status: "free",
@@ -29,7 +29,7 @@ const BookStatusTable = () => {
     },
     {
       no: 1,
-      book_no: "5235",
+      book_no: "3475",
       owner: "Birhanu N",
       avatar: "",
       status: "rented",
@@ -37,7 +37,7 @@ const BookStatusTable = () => {
     },
     {
       no: 2,
-      book_no: "5235",
+      book_no: "7532",
       owner: "Birhanu N",
       avatar: "",
       status: "free",
@@ -45,7 +45,7 @@ const BookStatusTable = () => {
     },
     {
       no: 1,
-      book_no: "5235",
+      book_no: "2375",
       owner: "Birhanu N",
       avatar: "",
       status: "rented",
@@ -53,7 +53,7 @@ const BookStatusTable = () => {
     },
     {
       no: 2,
-      book_no: "5235",
+      book_no: "8346",
       owner: "Birhanu N",
       avatar: "",
       status: "free",
@@ -76,10 +76,23 @@ const BookStatusTable = () => {
 
   const COLUMNS = [
     { label: "No.", renderCell: (item) => item.no },
-    { label: "Book No.", renderCell: (item) => item.book_no },
+    {
+      label: "Book No.",
+      renderCell: (item) => (
+        <div className="">
+          <span className="bg-stone-100 p-1 px-2 rounded-md">
+            {item.book_no}
+          </span>
+        </div>
+      ),
+    },
     {
       label: "Owner",
-      renderCell: (item) => item.owner,
+      renderCell: (item) => (
+        <div className="flex items-center gap-3">
+          <Avatar alt="Birhanu" className="w-10 h-10" /> {item.owner}
+        </div>
+      ),
     },
     {
       label: "Status",
@@ -96,7 +109,7 @@ const BookStatusTable = () => {
     },
     {
       label: "Price",
-      renderCell: (item) => item.price,
+      renderCell: (item) => <span>{item.price} Birr</span>,
     },
   ];
 
